@@ -42,14 +42,14 @@ function App() {
           <EnsureLogin>
             <Header />
           <Routes>
-            <Route
+            {/* <Route
               path="/article"
               element={<Articles />} 
-            />
-             {/* <Route
+            /> */}
+             <Route
               path={process.env.PUBLIC_URL + '/article'}
               element={<Articles />} 
-            />   */}
+            />  
           </Routes>
           </EnsureLogin>
         </Router>
