@@ -45,12 +45,14 @@ function App() {
           <EnsureLogin>
             <Header />
           <Routes>
-            {/* <Route path="/" element={<LoginPage />} /> */}
-            <Route
+            {/* <Route
               path="/article"
               element={<Articles />} 
+            /> */}
+             <Route
+              path={process.env.PUBLIC_URL + '/article'}
+              element={<Articles />} 
             />
-            {/* <Route path="*" element={<p>There's nothing here!</p>} /> */}
           </Routes>
           </EnsureLogin>
         </Router>
