@@ -10,8 +10,7 @@ import { UserContext } from "./ccontext/userContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EnsureLogin from "./components/Login/EnsureLogin";
 import Articles from "./components/Article/Article";
-import Header from "./components/Header/Header";
-// import  from "./redux";
+import Header from "./components/Header/Header";;
 
 function App() {
   const [user, userDispatch] = useReducer(userReducer, {});
@@ -36,8 +35,6 @@ function App() {
     };
   }, [user]);
 
-  // const time = new Date();
-  // time.setSeconds(time.getSeconds() + 60);
   return (
     <React.Fragment>
       <UserContext.Provider value={userInfo}>
@@ -45,14 +42,14 @@ function App() {
           <EnsureLogin>
             <Header />
           <Routes>
-            {/* <Route
+            <Route
               path="/article"
               element={<Articles />} 
-            /> */}
-             <Route
+            />
+             {/* <Route
               path={process.env.PUBLIC_URL + '/article'}
               element={<Articles />} 
-            />  
+            />   */}
           </Routes>
           </EnsureLogin>
         </Router>
