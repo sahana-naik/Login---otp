@@ -54,7 +54,8 @@ const OtpPage = ({ phonenumber }) => {
             data: res?.data.Response
           }))
           setIsLogin(true);
-          navigate(process.env.PUBLIC_URL + '/article')
+          // navigate(process.env.PUBLIC_URL + '/article')
+          navigate('/article')
       })
       .catch((err) => {
         console.log(err);
